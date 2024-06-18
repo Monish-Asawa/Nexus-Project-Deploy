@@ -1,0 +1,31 @@
+.Products {
+    background-color: rgb(0, 0, 0);
+    /* background-color: aqua; */
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+    color: white; 
+
+    opacity: 1;
+  transform: translateY(100px);
+  transition: opacity 2s ease, transform 0.5s ease ;
+}
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+#Products-content-1 {
+    position: absolute;
+    top: 7vh;
+    left: 12vw;
+    font-size: 4.5vw;
+}
+
+#Products-content-2 {
+    position: absolute;
+    top: 17vh;
+    left: 12vw;
+    font-size: 4.5vw;
+}

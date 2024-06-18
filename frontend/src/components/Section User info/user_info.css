@@ -1,0 +1,142 @@
+.user-info{
+    background-color: #000000;
+    /* background-color: aqua; */
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+    color: white; 
+
+    opacity: 1;
+    transform: translateY(100px);
+    transition: opacity 2s ease, transform 0.5s ease ;
+}
+
+#user-info-content-1 {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    /* left: 12vw; */
+    font-size: 5vw;
+}
+
+
+.customer-info-text {
+  /* justify-content: center; Center align the form */
+  position: absolute;
+  left: 17vw;
+  top: 27.5vh; 
+}
+
+
+/* Importing Google Fonts and Font Awesome */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* Form container styling */
+.form {
+    position: absolute;
+    top: 36.5vh;
+    left: 17vw;
+    max-width: 23.5vw;
+    padding: 4vh 2vw;
+    background: rgba(160, 160, 160, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(55, 55, 55, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Form label styling */
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffcc99; /* Soft accent color */
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 8px; /* Space between label and input */
+}
+
+.form-label i {
+  color: #ff9933;
+}
+
+/* Form input and select styling */
+.form-input,
+.form-select {
+  width: calc(100% - 30px);
+  padding: 1.5vh;
+  margin-top: 1vh;
+  margin-bottom: 2vh; 
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Form button styling */
+.form-button {
+  width: 100%;
+  padding: 1.7vh;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff9933, #ff6600);
+  color: #fff;
+  font-size: 0.9vw;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 99, 0, 0.3);
+}
+
+.form-button:hover {
+  background: linear-gradient(135deg, #ff6600, #ff9933);
+  transform: scale(1.02);
+}
+
+/* Additional styling for form on a black background */
+
+
+/* Smooth transition for form elements */
+.form-input,
+.form-select,
+.form-button {
+  transition: all 0.3s ease;
+}
+
+/* Fine-tuning the select dropdown */
+.form-select {
+  width: 100%;  
+  appearance: none;
+  background: rgba(255, 255, 255, 0.1);
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M7 10l5 5 5-5H7z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 3vh 3vh;
+}
+
+/* Making the form label icons align vertically */
+.form-label i {
+  position: absolute;
+  left: 0;
+  top: 55%;
+  transform: translateY(-50%);
+}

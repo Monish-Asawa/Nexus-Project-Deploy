@@ -1,0 +1,32 @@
+.About-us {
+    /* background-color: #000000; */
+    /* background-color: aqua; */
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+    color: white; 
+
+    opacity: 1;
+    transform: translateY(100px);
+    transition: opacity 2s ease, transform 0.5s ease ;
+}
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+#About-us-content-1 {
+    position: absolute;
+    top: 3vh;
+    left: 12vw;
+    font-size: 5vw;
+}
+
+.parallax-layer-1 {
+    height: 150%;
+    position: relative;
+    /* background-color: aquamarine; */
+}
+
+

@@ -1,0 +1,54 @@
+/* src/VerticalNavbar.css */
+.vertical-navbar {
+    width: 4vw;
+    height: 50%;
+    /* background: rgba(63, 63, 63, 0.155); */
+    background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.9) 40%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(255, 255, 255, 0.08) 40%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+
+
+    backdrop-filter: blur(10px); 
+    /* box-shadow: 5px 0px 15px rgba(12, 12, 12, 0.2);  */
+    position: fixed;
+    top: 24vh; 
+    left: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    z-index: 999;
+    border: 1px solid rgba(25, 25, 25, 0.9); 
+
+  }
+  
+  .vertical-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .vertical-navbar li {
+    margin: 7vh 0;
+    text-align: center;
+  }
+  
+  .vertical-navbar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+  }
+  .vertical-navbar a:hover {
+    color: #575757;
+  }

@@ -1,0 +1,46 @@
+/* ScrollableImages.css */
+.scrollable-images {
+  position: relative;
+  top: 50vh; /* Adjust as needed */
+  display: flex;
+  overflow-x: auto; /* Use auto for horizontal scroll, scroll for always visible scroll */
+  gap: 20px; /* Adjust spacing between images */
+  padding: 10px; /* Optional: Add padding around the images */
+  width: 100%; /* Ensure the container stretches across the viewport */
+  max-width: 100%; /* Ensure the container doesn't exceed the viewport */
+  height: 30vh;
+  scroll-snap-type: x mandatory; /* Ensures snapping behavior */
+  padding-top: 120px; /* Extra space to accommodate the shifted center image */
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+
+.image-wrapper {
+  flex: 0 0 auto;
+  width: 200px; /* Base width of the images */
+  height: 150px; /* Base height of the images */
+  transition: transform 0.3s, width 0.3s, height 0.3s; /* Smooth transition */
+  text-align: center;
+  /* background-color: aqua; */
+}
+.image-wrapper img {
+  max-width: 100%;
+  /* width: 30vw; */
+  height: auto;
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.image-wrapper p {
+  margin-top: 5px; /* Optional: Adjust spacing below image */
+  font-size: 14px; /* Optional: Adjust caption font size */
+  color: #555; /* Optional: Adjust caption color */
+}
+
+.image-wrapper.center {
+  width: 25vw; /* Larger size for the centered image */
+  height: 75vh; /* Larger size for the centered image */
+  transform: scale(1.2) translateY(-20px); /* Optional: Adds scaling effect */
+}
+
+  

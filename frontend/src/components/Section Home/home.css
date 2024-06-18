@@ -1,0 +1,36 @@
+.Home {
+    /* background-color: rgb(185, 0, 0); */
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+    color: white; 
+    opacity: 1;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 1s ease;
+}
+
+
+
+
+#home-line-1 {
+    position: absolute;
+    top: 8vh;
+    left: 40vw;
+    font-size: 9vw;
+}
+
+#home-line-2 {
+    position: absolute;
+    top: 25vh;
+    left: 35.5vw;
+    font-size: 9vw;
+}
+
+#home-line-3 {
+    position: absolute;
+    top: 45vh;
+    left: 41vw;
+    font-size: 9vw;
+}
+
+  

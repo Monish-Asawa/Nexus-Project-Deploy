@@ -1,0 +1,97 @@
+/* Feedback Form container styling */
+.feedback-form-container {
+    justify-content: center; /* Center align the form */
+    position: absolute;
+    left: 60vw;
+    top: 28vh;
+}
+  
+.feedback-form-container-text {
+    text-align: right;
+}
+
+  /* Feedback Form styling */
+  .feedback-form {
+    max-width: 23.5vw;
+    padding: 4vh;
+    background: rgba(227, 227, 227, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(55, 55, 55, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+  
+  .feedback-title {
+    margin-left: 48%;
+    transform: translateX(-50%);
+  }
+
+  /* Feedback Form row styling */
+  .feedback-form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+  }
+  
+  /* Feedback Form label styling */
+  .feedback-form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffcc99; /* Soft accent color */
+    margin-bottom: 8px; /* Space between label and input */
+    margin-right: 3px;
+  }
+  
+  /* Feedback Form input styling */
+  .feedback-form-input-rating {
+    width: calc(100% - 1.4vw);
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 2vh;
+    margin-top: 8px;
+  }
+  
+  .feedback-form-input {
+    width: calc(100% - 10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 2vh;
+    margin-top: 8px;
+  }
+
+
+  .feedback-form-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Feedback Form button styling */
+  .feedback-form-button {
+    width: 100%;
+    padding: 1.7vh;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff9933, #ff6600);
+    color: #fff;
+    font-size: 0.9vw;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 99, 0, 0.3);
+    margin-top: 2vh;
+  }
+  
+  .feedback-form-button:hover {
+    background: linear-gradient(135deg, #ff6600, #ff9933);
+    transform: scale(1.02);
+  }
+  

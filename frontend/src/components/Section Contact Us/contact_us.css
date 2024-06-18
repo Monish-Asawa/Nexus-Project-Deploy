@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+.contact-us {
+    background-color: #000000;
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+    color: white;
+    opacity: 1;
+    transform: translateY(100px);
+    transition: opacity 2s ease, transform 0.5s ease;
+}
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#contact-us-content-1 {
+    position: absolute;
+    top: 12vh;
+    left: 31vw;
+    font-size: 4vw;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.cards-container {
+    position: absolute;
+    top: 42vh;
+    left: 17vw;
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+    gap: 2vw; /* Space between cards */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.card {
+    background: linear-gradient(135deg, rgba(50, 50, 50, 0.8), rgba(20, 20, 20, 0.8)); /* Slightly darker gradient for visible base */
+    border: none; /* No visible border */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow content */
+    width: 15vw; /* Fixed width for cards */
+    height: 30vh;
+    position: relative; /* Positioning for hover effect */
+    color: white;
+    transform-style: preserve-3d; /* Maintain 3D transformations */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Initial shadow */
+    backdrop-filter: blur(5px); /* Glass effect with blur */
+}
+
+.card:hover {
+    transform: translateY(-15px) rotateY(10deg); /* Lift and tilt on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Larger shadow on hover */
+}
+
+.card:before {
+    content: ''; /* Pseudo-element for overlay effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2)); /* Diagonal gradient overlay */
+    z-index: 1; /* Overlay above content */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Fade-in transition */
+}
+
+.card:hover:before {
+    opacity: 1; /* Fade in on hover */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    text-align: center; /* Center align heading */
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5; /* Improved readability */
+    padding: 0 20px; /* Padding for content */
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+    }
+
+    .card {
+        width: 80%; /* Adjust card width for smaller screens */
+        margin: 0 auto; /* Center cards */
+    }
+}
+
+.icon-class {
+    text-align: center;
+    margin-top: 5vh;
+    transition: transform 0.4s ease; /* Smooth rotation */
+}
+
+/* Specific hover effects for each card */
+.card.Whatsapp:hover {
+    background: linear-gradient(135deg, #25D366, #128C7E); /* Green gradient on Whatsapp hover */
+}
+
+.card.LinkedIn:hover {
+    background: linear-gradient(135deg, #0077B5, #1C87C9); /* Light blue gradient on LinkedIn hover */
+}
+
+.card.Instagram:hover {
+    background: linear-gradient(135deg, #E4405F, #CB2D3E); /* Pink gradient on Instagram hover */
+}
+
+.card.Facebook:hover {
+    background: linear-gradient(135deg, #3B5998, #192B4D); /* Dark blue gradient on Facebook hover */
+}
