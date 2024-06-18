@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './feedbackForm.css'; // Ensure your CSS is correctly imported
 
+const backendSite = process.env.REACT_APP_BACKEND_SITE;
+
 const FeedbackForm = () => {
   const [formData, setFormData] = useState({
     usability: '',
@@ -8,17 +10,18 @@ const FeedbackForm = () => {
     performance: '',
     suggestions: ''
   });
-
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (handleValidation()) {
       try {
-        const response = await fetch('http://localhost:5000/submit-feedback', {
+        console.log(backendSite); 
+        const response = await fetch(`${backendSite}/submit-feedback`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

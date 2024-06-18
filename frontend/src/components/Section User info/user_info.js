@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './user_info.css';
 import FeedbackForm from './feedbackForm';
 
+const backendSite = process.env.REACT_APP_BACKEND_SITE;
+
 const UserInfo = () => {
   
   // Form for Customer Info
@@ -24,7 +26,7 @@ const UserInfo = () => {
     e.preventDefault();
     if (formData.fullName && formData.email && formData.gender) {
       try {
-        const response = await fetch('http://localhost:5000/submit-user-info', {
+        const response = await fetch(`${backendSite}/submit-user-info`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
