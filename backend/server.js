@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -5,13 +7,14 @@ const mongoose = require('mongoose');
 
 const app = express();
 const PORT = 5000;
+const dbUrl = process.env.DB_URL;
 
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://monish:r3Sg0TIAXx3ivsTF@nexus-final-project.k3ck46i.mongodb.net/?retryWrites=true&w=majority&appName=Nexus-final-project');
+mongoose.connect(dbUrl);
 
 // MongoDB schemas and models
 const feedbackSchema = new mongoose.Schema({
