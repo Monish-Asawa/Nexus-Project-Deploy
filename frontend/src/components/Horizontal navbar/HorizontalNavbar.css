@@ -1,6 +1,7 @@
 /* src/HorizontalNavbar.css */
 .horizontal-navbar {
-  width: 35%;
+  /* width: 35%; */
+  width: 35vw;
   padding: 0.8vw;
   background: linear-gradient(
     135deg,
@@ -40,16 +41,19 @@
 
 
 .horizontal-navbar li {
-  margin: 0 10px; /* Increased spacing for elegance */
+  /* margin: 0 10px;  */
+  margin: 0 0.5vw; 
   position: relative; /* For positioning the underline */
 }
 
 .horizontal-navbar a {
   color: white;
   text-decoration: none;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
+  padding: 1vh 1vw;
   display: block;
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: 1.9vh;
   font-weight: 500;
   transition: color 0.3s ease; /* Smooth color transition */
   cursor: pointer;
@@ -72,9 +76,4 @@
 
 .horizontal-navbar a:hover {
   color: rgb(105, 249, 249); /* Optionally change text color on hover */
-}
-
-/* Ensure content doesn't hide under the navbar */
-.content {
-  padding-top: 60px; /* Adjust based on navbar height */
 }

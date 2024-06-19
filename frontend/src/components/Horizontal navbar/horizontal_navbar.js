@@ -15,7 +15,7 @@ const HorizontalNavbar = ({ parallaxRef }) => {
     <nav className="horizontal-navbar">
       <ul>
         <li>
-          <a href="#home" onClick={(e) => handleSmoothScroll(e, 0, 0.1)}>Home</a>
+          <a href="#home" onClick={(e) => handleSmoothScroll(e, 0, 0)}>Home</a>
         </li>
         <li>
           <a href="#aboutUs" onClick={(e) => handleSmoothScroll(e, 1, 0.1)}>About Us</a>
