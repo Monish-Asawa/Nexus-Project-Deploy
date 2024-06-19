@@ -37,14 +37,14 @@ const ScrollableImages = () => {
   };
 
   useEffect(() => {
-    const container = containerRef.current; // Store the current ref value in a variable
+    const container = containerRef.current; 
     calculateCenterIndex();
 
     const handleScroll = () => calculateCenterIndex();
     container.addEventListener('scroll', handleScroll);
 
     return () => container.removeEventListener('scroll', handleScroll);
-  }, []); // Empty dependency array to run only once
+  }, []); 
  
   return (
     <div ref={containerRef} className="scrollable-images" style={{ backgroundImage: `url(${backgroundUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }} >

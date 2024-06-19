@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import HorizontalNavbar from './components/Horizontal navbar/horizontal_navbar';
 import VerticalNavbar from './components/Vertical navbar/vertical_navbar';
 import './App.css';
@@ -10,27 +10,30 @@ import UserInfo from './components/Section User info/user_info';
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 const App = () => {
+  const parallaxRef = useRef(null);
 
   return (
     <div className="app-container">
-      <HorizontalNavbar  />
+      <HorizontalNavbar parallaxRef={parallaxRef} />
       <VerticalNavbar />
       <div className="app-content">
-        <Parallax pages={7.04} config={{ tension: 150, friction: 20 }}>
+        <Parallax ref={parallaxRef} pages={7.1} config={{ tension: 150, friction: 20 }}>
           <ParallaxLayer offset={0} speed={0.5}>
             <Home />
           </ParallaxLayer>
 
-          {/* About Us sections will stick together and leave together */}
-          <ParallaxLayer offset={1} speed={0.5} sticky={{ start: 1, end: 3 }}>
+          <ParallaxLayer offset={1} speed={1} sticky={{ start: 1, end: 3 }}>
             <AboutUs1 />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={2} speed={1} sticky={{ start: 2, end: 3 }}>
+          <ParallaxLayer offset={2} speed={0.5} sticky={{ start: 2, end: 3 }}>
             <AboutUs2 />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={3} speed={1.5}>
+          <ParallaxLayer offset={3} speed={0.05} style={{
+            height: "1vh",
+            // width: "50vw"
+          }}>
             <AboutUs3 />
           </ParallaxLayer>
 
@@ -42,7 +45,7 @@ const App = () => {
             <ContactUs />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={5.999} speed={0.5}>
+          <ParallaxLayer offset={6} speed={0.5}>
             <UserInfo />
           </ParallaxLayer>
         </Parallax>

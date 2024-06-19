@@ -23,10 +23,61 @@
     font-size: 5vw;
 }
 
-.parallax-layer-1 {
-    height: 150%;
-    position: relative;
-    /* background-color: aquamarine; */
+
+.About-us-content-2-1 {
+    position: absolute;
+    width: 10vw;
+    font-size: 1vw;
+    top: 23vh;
+    left: 10vw;
 }
+
+
+
+.About-us-content-2-2 {
+    position: absolute;
+    width: 10vw;
+    font-size: 1vw;
+    top: 25vh;
+    left: 35vw;
+}
+
+.About-us-content-2-3 {
+    position: absolute;
+    width: 10vw;
+    font-size: 1vw;
+    top: 25vh;
+    left: 73vw;
+}
+
+.About-us-content-3-1 {
+    position: absolute;
+    width: 10vw;
+    font-size: 1vw;
+    top: 35vh;
+    left: 22vw;
+}
+
+.About-us-content-3-2 {
+    position: absolute;
+    width: 10vw;
+    font-size: 1vw;
+    top: 37vh;
+    left: 87vw;
+}
+
+
+.rocket {
+    position: absolute;
+    left: 34vw;
+    top: -30vh;
+    width: 50vw;
+    height: 150vh;
+}
+
+/* .About-us-3 {
+    height: 50vh;
+    overflow: hidden;
+} */
 
 

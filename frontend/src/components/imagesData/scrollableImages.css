@@ -1,3 +1,47 @@
+/* ScrollableImages.css
+.scrollable-images {
+  position: relative;
+  top: 47vh;
+  display: flex;
+  overflow-x: auto; 
+  gap: 20px; 
+  width: 100%;
+  max-width: 100%; 
+  height: 30vh;
+  scroll-snap-type: x mandatory; 
+  padding-top: 120px;
+  overflow-y: hidden;
+  background-color: red;
+}
+
+
+.image-wrapper {
+  flex: 0 0 auto;
+  width: 200px; 
+  height: 150px; 
+  transition: transform 0.3s, width 0.3s, height 0.3s; 
+  text-align: center;
+}
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; 
+  cursor: pointer;
+}
+
+.image-wrapper p {
+  margin-top: 5px; 
+  font-size: 14px; 
+  color: #555; 
+}
+
+.image-wrapper.center {
+  width: 25vw; 
+  height: 75vh; 
+  transform: scale(1.2) translateY(-20px); 
+} */
+
+
 /* ScrollableImages.css */
 .scrollable-images {
   position: relative;
@@ -44,3 +88,4 @@
 }
 
   
+

@@ -1,71 +1,33 @@
+// HorizontalNavbar.js
 import React from 'react';
-import { Link } from 'react-scroll';
 import './HorizontalNavbar.css';
-// import { getOffset } from '../Scroll Navigation/scroll_navigation';
 
-const HorizontalNavbar = () => {
+const HorizontalNavbar = ({ parallaxRef }) => {
+
+  const handleSmoothScroll = (event, page, offset) => {
+    event.preventDefault();
+    if (parallaxRef && parallaxRef.current) {
+      parallaxRef.current.scrollTo(page+offset);
+    }
+  };
+
   return (
     <nav className="horizontal-navbar">
       <ul>
         <li>
-          <Link
-            activeClass="active"
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            Home
-          </Link>
+          <a href="#home" onClick={(e) => handleSmoothScroll(e, 0, 0.1)}>Home</a>
         </li>
         <li>
-          <Link
-            activeClass="active"
-            to="aboutUs"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            About Us
-          </Link>
+          <a href="#aboutUs" onClick={(e) => handleSmoothScroll(e, 1, 0.1)}>About Us</a>
         </li>
         <li>
-          <Link
-            activeClass="active"
-            to="products"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            Products
-          </Link>
+          <a href="#products" onClick={(e) => handleSmoothScroll(e, 4, 0.13)}>Products</a>
         </li>
         <li>
-          <Link
-            activeClass="active"
-            to="contactUs"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            Contact Us
-          </Link>
+          <a href="#contactUs" onClick={(e) => handleSmoothScroll(e, 5, 0.1)}>Contact Us</a>
         </li>
         <li>
-          <Link
-            activeClass="active"
-            to="userInfo"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            User Info
-          </Link>
+          <a href="#userInfo" onClick={(e) => handleSmoothScroll(e, 6, 0.08)}>User Info</a>
         </li>
       </ul>
     </nav>
